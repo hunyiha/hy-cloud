@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: hy-gateway-server
+  cloud:
+    nacos:
+      config:
+        enabled: false
+      discovery:
+        enabled: false
+  profiles:
+    active: local
+
+server:
+  port: 8001
+
+
+# 日志配置
+logging:
+  file:
+    name: logs/${spring.application.name}.log  # 日志文件名，全路径
+  level:
+    root: info
