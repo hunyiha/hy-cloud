@@ -4,15 +4,21 @@ spring:
   cloud:
     nacos:
       config:
-        enabled: false
+        namespace: dev
+        group: common
+        file-extension: yaml
       discovery:
-        enabled: false
+        namespace: dev
+        group: common
+      username: nacos
+      password: nacos
+      server-addr: 10.0.0.200:8848
   profiles:
-    active: local
+    active: dev
 
+# 服务端口
 server:
   port: 8001
-
 
 # 日志配置
 logging:

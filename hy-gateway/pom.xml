@@ -36,12 +36,18 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bootstrap</artifactId>
         </dependency>
+
+        <!-- 负载均衡器，如果少了这个依赖，会出现服务无法注册到nacos -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-loadbalancer</artifactId>
+        </dependency>
     </dependencies>
 
 
     <build>
         <!-- 设置构建的 jar 包名 -->
-        <finalName>${project.artifactId}-server</finalName>
+        <finalName>${project.artifactId}-web</finalName>
         <plugins>
             <!-- 打包 -->
             <plugin>
